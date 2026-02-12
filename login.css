@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 40px;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-box img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text h2 {
+  margin: 0;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.logo-text span {
+  font-size: 13px;
+  color: #666;
+}
+
+/* ================= LOGIN SECTION ================= */
+
+.login-container {
+  margin-top: 120px; /* space below fixed navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: #ffffff;
+  width: 360px;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-card input:focus {
+  border-color: #1e3a8a;
+}
+
+/* ================= BUTTONS ================= */
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #1e3a8a;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+.login-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.login-btn:hover {
+  opacity: 0.85;
+}
+
+.divider {
+  margin: 20px 0;
+  position: relative;
+  text-align: center;
+}
+
+.divider span {
+  background: #fff;
+  padding: 0 10px;
+  font-size: 13px;
+  color: #777;
+}
+
+.divider::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #ddd;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.google-btn:hover {
+  background: #f3f3f3;
+}
+
+.google-btn i {
+  color: #ea4335;
+}
+
+/* ================= SIGNUP TEXT ================= */
+
+.signup-text {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-text a {
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
