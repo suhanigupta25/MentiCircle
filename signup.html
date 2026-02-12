@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up | MentiCircle</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <nav class="navbar">
+
+  <div class="logo-box">
+    <img src="logo.jpeg" alt="MentiCircle Logo">
+    <div class="logo-text">
+      <h2>MentiCircle</h2>
+      <span>Learn • Mentor • Grow</span>
+    </div>
+  </div>
+
+</nav>
+
+  <div class="signup-container">
+
+    <div class="signup-card">
+      <h2>Create Your MentiCircle Account</h2>
+      <p class="subtitle">Join the mentorship community</p>
+
+      <form>
+
+        <!-- Username -->
+        <label>Username</label>
+        <input type="text" placeholder="Enter username" required>
+
+        <!-- DOB -->
+        <label>Date of Birth</label>
+        <input type="date" required>
+
+        <!-- Email -->
+        <label>Email</label>
+        <input type="email" placeholder="Enter email" required>
+
+        <!-- Password -->
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" required>
+
+        <!-- School -->
+        <label>School</label>
+        <input type="text" placeholder="Enter your school name" required>
+
+        <!-- College -->
+        <label>College</label>
+        <input type="text" placeholder="Enter your college name" required>
+
+        <!-- Graduation Year -->
+        <label>Graduation Year</label>
+        <input type="number" placeholder="e.g. 2026" min="2000" max="2035" required>
+
+        <label>Degree</label>
+        <input type="text" placeholder="e.g. B.Tech, M.Tech" required>
+
+        <label>Job Field (for those who are working)</label>
+        <input type="text" placeholder="e.g. Software Engineering, Data Science">
+
+        <label>Company (for those who are working)</label>
+        <input type="text" placeholder="Enter your company name" >
+
+        <label>Years of Experience (for those who are working)</label>
+        <input type="number" placeholder="e.g. 2" min="0" max="50" >
+
+      
+        <!-- Topics of Interest -->
+        <label>Topics of Interest</label>
+        <input type="text" placeholder="e.g. Web Development, AI, DSA" required>
+
+        <!-- Interest -->
+        <label>Register As</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="interest" required>
+            Mentor
+          </label>
+          <label>
+            <input type="radio" name="interest">
+            Mentee
+          </label>
+          <label>
+            <input type="radio" name="interest">
+            Both
+          </label>
+        </div>
+
+        <button type="submit" class="signup-btn">
+          <a href="dashboard.html">Create Account</a>
+        </button>
+
+        <p class="login-text">
+          Already have an account?
+          <a href="login.html">Login</a>
+        </p>
+
+      </form>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
