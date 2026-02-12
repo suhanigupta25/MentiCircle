@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Schedule meetings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#477eeb",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Header & Navigation -->
+<!-- Header & Navigation -->
+<header class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Left: Logo -->
+      <div class="flex items-center gap-3">
+        <img src="logo.jpeg" alt="MentiCircle Logo" class="h-10 w-auto object-contain">
+        <span class="text-xl font-bold text-primary">MentiCircle</span>
+      </div>
+
+      <!-- Center: Navigation -->
+      <nav class="hidden md:flex items-center gap-10">
+        <a href="dashboard.html"
+           class="text-slate-500 hover:text-primary transition-colors duration-200 font-medium">
+          Home
+        </a>
+
+        <a href="#"
+           class="text-primary font-semibold border-b-2 border-primary pb-1">
+          Available Sessions
+        </a>
+
+        <a href="schedule-meetings.html"
+           class="text-slate-500 hover:text-primary transition-colors duration-200 font-medium">
+          Schedule Sessions
+        </a>
+      </nav>
+
+      <!-- Right: Icons + Profile -->
+      <div class="flex items-center gap-6">
+        <button class="text-slate-500 hover:text-primary transition-colors duration-200">
+          <span class="material-icons">notifications_none</span>
+        </button>
+
+        <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-200 font-semibold border-2 border-white dark:border-slate-800">
+          SJ
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Title Section -->
+<div class="mb-8">
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white">Available Mentorship Sessions</h1>
+<p class="mt-2 text-slate-500 dark:text-slate-400">Find and join open sessions hosted by industry experts to boost your career.</p>
+</div>
+<!-- Filter Bar -->
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 mb-8 flex flex-wrap items-center gap-4">
+<div class="flex-1 min-w-[200px]">
+<label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Category</label>
+<div class="relative">
+<select class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:ring-primary focus:border-primary">
+<option>All Categories</option>
+<option>Technical</option>
+<option>Career</option>
+<option>Soft Skills</option>
+<option>Design</option>
+</select>
+</div>
+</div>
+<div class="flex-1 min-w-[200px]">
+<label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Mentor Role</label>
+<select class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:ring-primary focus:border-primary">
+<option>All Roles</option>
+<option>Software Engineer</option>
+<option>Product Manager</option>
+<option>UX Designer</option>
+<option>Data Scientist</option>
+</select>
+</div>
+<div class="flex-1 min-w-[200px]">
+<label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Date</label>
+<select class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:ring-primary focus:border-primary">
+<option>Anytime</option>
+<option>Today</option>
+<option>This Week</option>
+<option>Next Week</option>
+</select>
+</div>
+<div class="flex items-end h-full mt-5">
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg font-medium transition-colors flex items-center gap-2">
+<span class="material-icons text-sm">filter_list</span>
+                    Apply Filters
+                </button>
+</div>
+</div>
+<!-- Session Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col h-full">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">MK</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white leading-tight">Mark King</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Senior Dev @ TechCorp</p>
+</div>
+</div>
+<span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">Technical</span>
+</div>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">Mastering React Hooks and State</h2>
+<div class="flex flex-col gap-2 mb-4">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-icons text-sm text-primary">calendar_today</span>
+<span>Oct 14, 2023</span>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-icons text-sm text-primary">schedule</span>
+<span>02:00 PM (45 mins)</span>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-grow">
+                    A deep dive into functional components, custom hooks, and best practices for managing state in large applications. Perfect for junior developers.
+                </p>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-lg transition-all flex items-center justify-center gap-2">
+                    <a href="scheduling-success.html" class="text-white">Apply to Join</a>
+                </button>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col h-full">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-slate-600 text-white flex items-center justify-center font-bold text-lg">AL</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white leading-tight">Alice Low</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Product Lead @ Innovate</p>
+</div>
+</div>
+<span class="bg-amber-100 text-amber-700 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide dark:bg-amber-900/30 dark:text-amber-400">Career</span>
+</div>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">Transitioning into Product Management</h2>
+<div class="flex flex-col gap-2 mb-4">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-icons text-sm text-primary">calendar_today</span>
+<span>Oct 15, 2023</span>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-icons text-sm text-primary">schedule</span>
+<span>10:30 AM (60 mins)</span>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-grow">
+                    Sharing my journey from engineering to PM. We'll discuss how to leverage your technical background and ace the PM interview.
+                </p>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-lg transition-all flex items-center justify-center gap-2">
+                    <a href="scheduling-success.html" class="text-white">Apply to Join</a>
+                </button>
+</div>
+<!-- Card 3 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col h-full">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-indigo-500 text-white flex items-center justify-center font-bold text-lg">RJ</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white leading-tight">Ryan James</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Senior UX Designer</p>
+</div>
+</div>
+<span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide dark:bg-indigo-900/30 dark:text-indigo-400">Design</span>
+</div>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">Portfolio Reviews &amp; UI Trends</h2>
+<div class="flex flex-col gap-2 mb-4">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-icons text-sm text-primary">calendar_today</span>
+<span>Oct 16, 2023</span>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-icons text-sm text-primary">schedule</span>
+<span>04:00 PM (30 mins)</span>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-grow">
+                    Quick critiques of student portfolios. Bring your Figma links and let's polish your case studies together.
+                </p>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-lg transition-all flex items-center justify-center gap-2">
+                    <a href="scheduling-success.html" class="text-white">Apply to Join</a>
+                </button>
+</div>
+<!-- Card 4 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col h-full">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-lg">SH</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white leading-tight">Sara Huang</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Data Science Manager</p>
+</div>
+</div>
+<span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide dark:bg-emerald-900/30 dark:text-emerald-400">Technical</span>
+</div>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">Intro to Machine Learning Pipelines</h2>
+<div class="flex flex-col gap-2 mb-4">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-icons text-sm text-primary">calendar_today</span>
+<span>Oct 17, 2023</span>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-icons text-sm text-primary">schedule</span>
+<span>11:00 AM (45 mins)</span>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-grow">
+                    Learn how to structure your ML projects using modern pipeline tools. We will walk through data cleaning to model deployment.
+                </p>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-lg transition-all flex items-center justify-center gap-2">
+                    <a href="scheduling-success.html" class="text-white">Apply to Join</a>
+                </button>
+</div>
+<!-- Card 5 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col h-full">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg">DW</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white leading-tight">David Wu</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Communcations Coach</p>
+</div>
+</div>
+<span class="bg-orange-100 text-orange-700 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide dark:bg-orange-900/30 dark:text-orange-400">Soft Skills</span>
+</div>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">Public Speaking for Introverts</h2>
+<div class="flex flex-col gap-2 mb-4">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-icons text-sm text-primary">calendar_today</span>
+<span>Oct 18, 2023</span>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-icons text-sm text-primary">schedule</span>
+<span>01:00 PM (60 mins)</span>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-grow">
+                    Practical tips on how to present your ideas confidently in meetings and large groups without feeling drained.
+                </p>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-lg transition-all flex items-center justify-center gap-2">
+                    <a href="scheduling-success.html" class="text-white">Apply to Join</a>
+                </button>
+</div>
+<!-- Card 6 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col h-full">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-rose-500 text-white flex items-center justify-center font-bold text-lg">CP</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white leading-tight">Chloe Park</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Head of Talent @ FutureScale</p>
+</div>
+</div>
+<span class="bg-rose-100 text-rose-700 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide dark:bg-rose-900/30 dark:text-rose-400">Career</span>
+</div>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">Resume Roast &amp; Optimization</h2>
+<div class="flex flex-col gap-2 mb-4">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-icons text-sm text-primary">calendar_today</span>
+<span>Oct 19, 2023</span>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-icons text-sm text-primary">schedule</span>
+<span>03:00 PM (45 mins)</span>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 mb-6 flex-grow">
+                    Get an honest recruiter's perspective on what works and what doesn't. We'll live-edit a few student resumes during the session.
+                </p>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-lg transition-all flex items-center justify-center gap-2">
+                    <a href="scheduling-success.html" class="text-white">Apply to Join</a>
+                </button>
+</div>
+</div>
+<!-- Pagination or Load More -->
+<div class="mt-12 flex justify-center">
+<button class="px-8 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 font-medium rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                Load More Sessions
+            </button>
+</div>
+</main>
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-10 mt-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<div class="flex justify-center gap-2 mb-4">
+<div class="w-6 h-6 bg-primary/20 rounded-md flex items-center justify-center text-primary">
+<span class="material-icons text-xs">school</span>
+</div>
+<span class="text-sm font-bold text-slate-400">MentiCircle © 2026</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs">A marketplace connecting the next generation of talent with industry leaders.</p>
+</div>
+</footer>
+</body></html>
