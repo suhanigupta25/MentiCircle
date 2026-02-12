@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MentiCircle | Alumni Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="logobox">
+  <img src="logo.jpeg" alt="Logo">
+  <span class="logo">MentiCircle</span>
+</div>
+
+
+    <input type="text" placeholder="Search by name, role or university..." class="search-bar">
+
+    <div class="profile">
+      <span>Your Profile</span>
+      <i class="fa-solid fa-user"></i>
+    </div>
+  </div>
+
+  <div class="dashboard">
+
+    <div class="sidebar">
+      <h3>Menu</h3>
+      <a href="#">Dashboard</a>
+      <a href="student-request.html">Mentee Requests</a>
+      <a href="mentor-request.html">Find Mentors</a>
+      <a href="schedule-meetings.html">Schedule Meetings</a>
+      <a href="chat-list.html">Messages</a>
+      <a href="forum-page1.html">Forum</a>
+      <a href="about.html">About Us</a>
+      <a href="login.html">Logout</a>
+    </div>
+
+    <div class="content">
+
+      <h1>Welcome, Collaborator 👋</h1>
+      <p class="subtitle">
+        Track your mentorship impact and manage sessions efficiently.
+      </p>
+
+      <!-- KPI STATS -->
+      <div class="stats-grid">
+
+        <div class="stat-card">
+          <i class="fa-solid fa-calendar-check"></i>
+          <h2>18</h2>
+          <p>Sessions Attended</p>
+        </div>
+
+        <div class="stat-card">
+          <i class="fa-solid fa-user-group"></i>
+          <h2>188</h2>
+          <p>Active Connections</p>
+        </div>
+
+        <div class="stat-card">
+          <i class="fa-solid fa-chalkboard-user"></i>
+          <h2>12</h2>
+          <p>Sessions Taken</p>
+        </div>
+
+        <div class="stat-card highlight">
+          <i class="fa-solid fa-clock"></i>
+          <h2>16</h2>
+          <p>Hours Spent</p>
+        </div>
+
+      </div>
+
+      
+      <div class="lower-section">
+
+        <!-- UPCOMING SESSIONS -->
+        <div class="upcoming">
+          <h3>Upcoming Mentorship Sessions</h3>
+
+          <div class="session-card">
+            <p><strong>Career Guidance</strong></p>
+            <span>📅 Feb 10 | ⏰ 5:00 PM</span>
+          </div>
+
+          <div class="session-card">
+            <p><strong>Resume Review</strong></p>
+            <span>📅 Feb 12 | ⏰ 6:30 PM</span>
+          </div>
+
+          <div class="session-card">
+            <p><strong>Placement Preparation</strong></p>
+            <span>📅 Feb 15 | ⏰ 4:00 PM</span>
+          </div>
+          
+          
+             <a href="scheduling-more.html" class="view-all">
+            View all sessions →
+          </a>
+          
+        </div>
+
+        <!-- MENTOR OF THE MONTH -->
+        <div class="mentor-highlight">
+          <h3>Mentor of the Month 🏆</h3>
+          <br>
+
+          <div class="mentor-card">
+            <div class="avatar">JS</div>
+            <br>
+            <h4>Jaskirat Singh</h4>
+            <p>Software Engineer @ Google</p>
+            <span>Recognized for outstanding mentorship & guidance</span>
+          </div>
+        </div>
+
+        <!-- RECENT DISCUSSIONS -->
+        <div class="recent-discussions">
+          <h3>Recent Discussions 💬</h3>
+
+          <div class="discussion-card">
+            <div class="discussion-avatar">AS</div>
+            <div class="discussion-info">
+              <h4>Resume Review</h4>
+              <p>Aman Sharma: Can you check my CV?</p>
+              <span>5 mins ago</span>
+            </div>
+          </div>
+
+          <div class="discussion-card">
+            <div class="discussion-avatar">PK</div>
+            <div class="discussion-info">
+              <h4>DSA Roadmap</h4>
+              <p>Priya Kaur: Which topics first?</p>
+              <span>20 mins ago</span>
+            </div>
+          </div>
+
+          <div class="discussion-card">
+            <div class="discussion-avatar">RJ</div>
+            <div class="discussion-info">
+              <h4>Internship Guidance</h4>
+              <p>Rohit Jain: Need referral advice</p>
+              <span>1 hour ago</span>
+            </div>
+          </div>
+
+          <a href="forum-page1.html" class="view-all">
+            View all discussions →
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-section">
+        <h3>MentiCircle</h3>
+        <p>
+          A collaborative mentorship platform where learners and mentors
+          grow together.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="mentor-request.html">Find Mentors</a></li>
+          <li><a href="student-request.html">Mentee Requests</a></li>
+          <li><a href="schedule-meetings.html">Schedule Meetings</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect With Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 MentiCircle. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
