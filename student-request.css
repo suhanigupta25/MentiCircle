@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f4f6ff, #eef1ff);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.main-layout {
+  display: flex;
+  min-height: 100vh;
+}
+.page-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+.navbar {
+  height: 64px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.logobox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logobox img {
+  height: 40px;      /* controls logo size */
+  width: auto;       /* keeps aspect ratio */
+  object-fit: contain;
+}
+
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #5a4bff;
+}
+
+.search-bar {
+  width: 320px;
+  padding: 9px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 240px;
+  background: #111827;
+  padding: 32px 20px;
+  min-height: 100vh;
+}
+
+.sidebar h3 {
+  color: #9ca3af;
+  margin-bottom: 22px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 16px;
+  color: #e5e7eb;
+  text-decoration: none;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.sidebar a:hover {
+  background: #1f2937;
+  transform: translateX(4px);
+}
+
+/* ================= MAIN CONTENT ================= */
+.main-content {
+  flex: 1;
+  padding: 36px 40px;
+  overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+.header {
+  margin-bottom: 36px;
+}
+
+.header h1 {
+  font-size: 34px;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #6b7280;
+}
+
+/* ================= REQUEST LIST ================= */
+.request-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ================= REQUEST CARD ================= */
+.request-card {
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.request-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* ================= AVATAR ================= */
+.avatar {
+  height: 64px;
+  width: 64px;
+  min-width: 64px;
+  background: linear-gradient(135deg, #5a4bff, #7b6cff);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 21px;
+}
+
+/* ================= INFO ================= */
+.request-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.request-info h3 {
+  font-size: 19px;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.request-info p {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.request-info span {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.actions button {
+  border: none;
+  padding: 11px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.actions button:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+.accept {
+  background: #16a34a;
+  color: white;
+}
+
+.reject {
+  background: #dc2626;
+  color: white;
+}
+
+.ignore {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+@media (max-width: 900px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 90%;
+    min-height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .sidebar a {
+    flex: 1 1 46%;
+  }
+
+  .main-content {
+    padding: 28px 22px;
+  }
+
+  .search-bar {
+    width: 200px;
+  }
+}
