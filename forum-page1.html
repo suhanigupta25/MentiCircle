@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MentiCircle | Community Forum</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#135bec",
+        sidebar: "#0b1c3d"
+      },
+      fontFamily: {
+        sans: [ "Segoe UI","sans-serif"]
+      }
+    }
+  }
+}
+</script>
+</head>
+
+<body class="bg-slate-100 font-sans">
+
+<div class="flex min-h-screen">
+
+  <!-- SIDEBAR -->
+  <aside class="w-64 bg-sidebar text-white flex flex-col px-6 py-8 gap-6">
+    <p class="uppercase text-xs tracking-widest text-slate-300 font-semibold">
+      Menu
+    </p>
+
+    <nav class="flex flex-col gap-4 text-sm">
+      <a href="dashboard.html" class="hover:text-primary" style="margin-top:1rem;">Dashboard</a>
+      <a href="student-requests.html" class="hover:text-primary" style="margin-top:1rem;">Mentee Requests</a>
+      <a href="mentorship-requests.html" class="hover:text-primary" style="margin-top:1rem;">Find Mentors</a>
+      <a href="schedule-meetings.html" class="hover:text-primary" style="margin-top:1rem;">Schedule Meetings</a>
+      <a href="chat-list.html" class="hover:text-primary" style="margin-top:1rem;">Messages</a>
+      <a href="forum-page1.html" class="hover:text-primary" style="margin-top:1rem;">Forum</a>
+      <a href="about.html" class="hover:text-primary" style="margin-top:1rem;">About Us</a>
+    </nav>
+
+    <div class="mt-auto pt-6 border-t border-white/20">
+      <a href="#" class="text-red-300 hover:text-red-400 font-semibold">
+        Logout
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="flex-1 flex flex-col">
+
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm px-8 py-4 sticky top-0 z-10">
+      <div class="flex items-center justify-between max-w-7xl mx-auto">
+
+        <div class="flex items-center gap-3">
+  <img src="logo.jpeg" alt="MentiCircle Logo" class="h-20 w-auto object-contain">
+  <span class="text-xl font-bold text-primary">MentiCircle</span>
+</div>
+        <div class="flex-1 max-w-xl mx-8 relative">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+          <input
+            class="w-full pl-10 pr-4 py-2 bg-slate-100 rounded-xl outline-none"
+            placeholder="Search discussions..."
+          />
+        </div>
+
+        <button class="bg-primary text-white px-4 py-2 rounded-xl text-sm font-semibold">
+          
+          <a href="new-discussion.html" >+ New Discussion</a>
+        </button>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="max-w-7xl mx-auto w-full px-8 py-6 grid grid-cols-1 xl:grid-cols-[1fr_320px] gap-8">
+
+      <!-- POSTS -->
+      <div class="space-y-5">
+
+        <!-- POST 1 -->
+        <div class="bg-white p-5 rounded-xl border hover:border-primary transition">
+          <a href="forum-detail-discussion.html">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-rose-100 text-rose-700 rounded-full flex items-center justify-center font-bold">
+              SC
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 text-sm">
+                <span class="font-bold">Sudiksha Chaurasia</span>
+                <span class="text-xs bg-primary/10 text-primary px-2 rounded">Alumni @ Google</span>
+                <span class="text-slate-400 text-xs">• 2h ago</span>
+              </div>
+              <h3 class="font-bold text-lg mt-1">
+                
+                Tips for landing a SWE role at Big Tech
+              </h3>
+              <p class="text-slate-500 text-sm mt-1">
+                I recently completed interviews at Google and Meta. Sharing updated prep strategy, system design focus and mistakes to avoid.
+              </p>
+              <div class="flex gap-4 text-xs text-slate-500 mt-3">
+                <span>💬 42 Replies</span>
+                <span>👁 1.2k Views</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        </div>
+
+        <!-- POST 2 -->
+        <div class="bg-white p-5 rounded-xl border hover:border-primary transition">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center font-bold">
+              MT
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 text-sm">
+                <span class="font-bold">Manoj Thakur</span>
+                <span class="text-xs bg-slate-100 px-2 rounded">Final Year</span>
+                <span class="text-slate-400 text-xs">• 5h ago</span>
+              </div>
+              <h3 class="font-bold text-lg mt-1">
+                Managing internship with final year project?
+              </h3>
+              <p class="text-slate-500 text-sm mt-1">
+                My internship workload is heavy along with college project deadlines. Any time-management hacks?
+              </p>
+              <div class="flex gap-4 text-xs text-slate-500 mt-3">
+                <span>💬 18 Replies</span>
+                <span>👁 456 Views</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- POST 3 -->
+        <div class="bg-white p-5 rounded-xl border hover:border-primary transition">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center font-bold">
+              AR
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 text-sm">
+                <span class="font-bold">Aarav Rajput</span>
+                <span class="text-xs bg-primary/10 text-primary px-2 rounded">Alumni @ Amazon</span>
+                <span class="text-slate-400 text-xs">• 1d ago</span>
+              </div>
+              <h3 class="font-bold text-lg mt-1">
+                IC vs Manager — what should you choose?
+              </h3>
+              <p class="text-slate-500 text-sm mt-1">
+                After 6 years as an IC, I moved into management. Here’s what I wish someone told me earlier.
+              </p>
+              <div class="flex gap-4 text-xs text-slate-500 mt-3">
+                <span>💬 89 Replies</span>
+                <span>👁 3.1k Views</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <aside class="space-y-6">
+
+        <!-- TRENDING -->
+        <div class="bg-white p-5 rounded-xl border">
+          <h4 class="font-bold text-sm mb-3">🔥 Trending Topics</h4>
+          <ul class="space-y-2 text-sm text-primary font-semibold">
+            <li>#GoogleReferrals2024</li>
+            <li>#FinalYearStruggle</li>
+            <li>#SystemDesign</li>
+          </ul>
+        </div>
+
+        <!-- CONTRIBUTORS -->
+        <div class="bg-white p-5 rounded-xl border">
+          <h4 class="font-bold text-sm mb-3">🏆 Top Contributors</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex justify-between">
+              <span>Sonia Gupta</span><span class="text-slate-400">980 helps</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Rohit Mehta</span><span class="text-slate-400">854 helps</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Ankit Verma</span><span class="text-slate-400">740 helps</span>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
