@@ -8,6 +8,15 @@ Organized Request System,
 Engagement Dashboard,
 Recognition System
 <br>
-Host it live?<br>
-Start with signup.html 
+1. Clone the repository:
+   <br>
+   git clone https://github.com/your-username/repo-name.git
+   <br>
+
+3. Open the project folder.
+ <br>
+
+5. Open signup.html in your browser <br>
+   OR<br>
+   Right click signup.html in VS Code and select "Open with Live Server"
 
