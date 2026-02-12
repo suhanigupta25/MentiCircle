@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MentiCircle | Find Mentors</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="mentor-request.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logobox">
+  <img src="logo.jpeg" alt="Logo">
+  <span class="logo">MentiCircle</span>
+</div>
+
+
+    <input type="text" placeholder="Search by name, job role or company..." class="search-bar">
+
+    <div class="profile">
+      <span>Your Profile</span>
+      <i class="fa-solid fa-user"></i>
+    </div>
+  </div>
+
+  <!-- MAIN LAYOUT -->
+  <div class="main-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h3>Menu</h3>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="student-request.html">Mentee Requests</a>
+      <a href="mentor-request.html">Find Mentors</a>
+      <a href="schedule-meetings.html">Schedule Meetings</a>
+      <a href="chat-list.html">Messages</a>
+      <a href="forum-page1.html">Forum</a>
+      <a href="about.html">About Us</a>
+      <a href="login.html">Logout</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <div class="page-container">
+
+        <!-- HEADER -->
+        <div class="header">
+          <h1>Find Mentors</h1>
+          <p>Connect with verified industry professionals for guidance & growth</p>
+        </div>
+
+        <!-- MENTOR CARDS -->
+        <div class="card-grid">
+
+          <div class="person-card">
+            <div class="avatar">RS</div>
+            <h3>Rahul Srivastav</h3>
+            <p class="role">Software Engineer</p>
+            <span class="company">Google</span>
+
+            <div class="tags">
+              <span>DSA</span>
+              <span>System Design</span>
+            </div>
+
+            <button class="request-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              <script> 
+              document.querySelector('.person-card:nth-child(1) .request-btn').addEventListener('click', function() { alert('Mentorship request sent to Rahul Srivastav!'); }); </script>
+              Send Request
+            </button>
+          </div>
+
+          <div class="person-card">
+            <div class="avatar">AV</div>
+            <h3>Ananya Verma</h3>
+            <p class="role">Data Analyst</p>
+            <span class="company">Microsoft</span>
+
+            <div class="tags">
+              <span>SQL</span>
+              <span>Power BI</span>
+            </div>
+
+            <button class="request-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              <script>
+document.querySelector('.person-card:nth-child(2) .request-btn').addEventListener('click', function() { alert('Mentorship request sent to Ananya Verma!'); }); </script>
+              Send Request
+            </button>
+          </div>
+
+          <div class="person-card">
+            <div class="avatar">AP</div>
+            <h3>Amit Patel</h3>
+            <p class="role">Backend Developer</p>
+            <span class="company">Amazon</span>
+
+            <div class="tags">
+              <span>Node.js</span>
+              <span>AWS</span>
+            </div>
+
+            <button class="request-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              <script>
+document.querySelector('.person-card:nth-child(3) .request-btn').addEventListener('click', function() { alert('Mentorship request sent to Amit Patel!'); }); </script>
+              Send Request
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
