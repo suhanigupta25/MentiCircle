@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mentor Chat Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary: #135bec;
+            --background-light: #f6f6f8;
+            --background-dark: #101622;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-hidden">
+<div class="flex h-screen overflow-hidden">
+<div class="flex-1 flex flex-col h-full">
+<header class="h-20 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 flex items-center justify-between gap-4 z-20">
+<div class="flex items-center gap-6">
+<h1 class="text-xl font-bold text-slate-900 dark:text-white shrink-0">Conversations</h1>
+<div class="flex bg-slate-100 dark:bg-slate-800 p-1 rounded-lg">
+<button class="px-4 py-1.5 text-sm font-medium rounded-md bg-white dark:bg-primary shadow-sm text-primary dark:text-white">All</button>
+<button class="px-4 py-1.5 text-sm font-medium text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Alumni</button>
+<button class="px-4 py-1.5 text-sm font-medium text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Junior</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-2 px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-lg text-sm bg-white dark:bg-slate-800 hover:border-primary transition-colors">
+<span class="material-icons text-sm text-slate-400">filter_list</span>
+<span>Category: All</span>
+<span class="material-icons text-sm">expand_more</span>
+</button>
+</div>
+</div>
+<div class="flex-1 max-w-md relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm" placeholder="Search names or messages..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+<span class="material-icons">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">SJ</div>
+</div>
+</header>
+<div class="flex-1 flex overflow-hidden">
+<aside class="w-96 flex flex-col bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 overflow-y-auto">
+<div class="p-4 border-l-4 border-primary bg-primary/5 hover:bg-primary/10 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-800">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-700 dark:text-blue-200 font-bold shrink-0">AS</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-semibold text-sm truncate">Alex Smith</h3>
+<span class="text-[10px] text-slate-400 uppercase font-bold">2m ago</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 text-[10px] bg-primary text-white rounded uppercase tracking-wider font-bold">Junior</span>
+<span class="px-2 py-0.5 text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded uppercase tracking-wider font-semibold">Career Advice</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1 italic">"Thank you for the advice on the mock interview..."</p>
+</div>
+</div>
+</div>
+<div class="p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-800">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 font-bold shrink-0">MK</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-semibold text-sm truncate">Maria Khan</h3>
+<span class="text-[10px] text-slate-400 uppercase font-bold">1h ago</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 text-[10px] bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded uppercase tracking-wider font-bold">Alumni</span>
+<span class="px-2 py-0.5 text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded uppercase tracking-wider font-semibold">Technical Doubt</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">"How did you handle the backend scale-up?"</p>
+</div>
+</div>
+</div>
+<div class="p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-800">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center text-emerald-700 dark:text-emerald-200 font-bold shrink-0">RT</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-semibold text-sm truncate">Ryan T.</h3>
+<span class="text-[10px] text-slate-400 uppercase font-bold">Yesterday</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 text-[10px] bg-primary text-white rounded uppercase tracking-wider font-bold">Junior</span>
+<span class="px-2 py-0.5 text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded uppercase tracking-wider font-semibold">Resume Review</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">"I've attached the latest version of my CV."</p>
+</div>
+</div>
+</div>
+<div class="p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-800">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-amber-100 dark:bg-amber-900 flex items-center justify-center text-amber-700 dark:text-amber-200 font-bold shrink-0">JS</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-semibold text-sm truncate">Jessica Sun</h3>
+<span class="text-[10px] text-slate-400 uppercase font-bold">Oct 24</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 text-[10px] bg-primary text-white rounded uppercase tracking-wider font-bold">Junior</span>
+<span class="px-2 py-0.5 text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded uppercase tracking-wider font-semibold">Interview Prep</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1 text-primary italic font-medium">You: "Sure, let's schedule a call for Tuesday."</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col bg-background-light dark:bg-background-dark">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-700 dark:text-blue-200 font-bold">AS</div>
+<div>
+<h2 class="text-sm font-bold">Alex Smith</h2>
+<div class="flex items-center gap-2">
+<span class="flex h-2 w-2 rounded-full bg-green-500"></span>
+<span class="text-[11px] text-slate-500 font-medium">Active Now</span>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+<span class="material-icons">info_outline</span>
+</button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-6 space-y-6">
+<div class="flex justify-center">
+<span class="px-3 py-1 bg-slate-200/50 dark:bg-slate-800 rounded-full text-[10px] font-bold text-slate-500 uppercase tracking-widest">Today</span>
+</div>
+<div class="flex gap-3 max-w-2xl">
+<div class="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-700 dark:text-blue-200 text-xs font-bold mt-1 shrink-0">AS</div>
+<div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl rounded-tl-none shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-sm leading-relaxed text-slate-800 dark:text-slate-200">
+                                    Hi Mentor! I just finished the technical assignment we discussed. The mock interview really helped me focus on the system design part. Do you have 10 minutes to chat about the compensation negotiation phase?
+                                </p>
+</div>
+<span class="text-[10px] text-slate-400 mt-1 block px-1">10:42 AM</span>
+</div>
+</div>
+<div class="flex gap-3 max-w-2xl ml-auto flex-row-reverse">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold mt-1 shrink-0">SJ</div>
+<div>
+<div class="bg-primary p-4 rounded-xl rounded-tr-none shadow-sm text-white">
+<p class="text-sm leading-relaxed">
+                                    That's great to hear! Yes, negotiating can be tricky. I'm available today at 4 PM to walk through some strategies. Does that work?
+                                </p>
+</div>
+<div class="flex items-center justify-end gap-1 mt-1 px-1">
+<span class="text-[10px] text-slate-400">10:45 AM</span>
+<span class="material-icons text-[14px] text-primary">done_all</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3 items-center">
+<div class="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-700 dark:text-blue-200 text-xs font-bold shrink-0">AS</div>
+<div class="flex gap-1 bg-white dark:bg-slate-800 px-3 py-2.5 rounded-full border border-slate-100 dark:border-slate-800 shadow-sm">
+<span class="w-1.5 h-1.5 bg-slate-300 dark:bg-slate-600 rounded-full animate-pulse"></span>
+<span class="w-1.5 h-1.5 bg-slate-300 dark:bg-slate-600 rounded-full animate-pulse delay-75"></span>
+<span class="w-1.5 h-1.5 bg-slate-300 dark:bg-slate-600 rounded-full animate-pulse delay-150"></span>
+</div>
+</div>
+</div>
+<footer class="p-6 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 bg-slate-100 dark:bg-slate-800 p-2 rounded-xl">
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-icons">attach_file</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-sm py-2" placeholder="Type your message here..." type="text"/>
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-icons">sentiment_satisfied</span>
+</button>
+<button class="bg-primary hover:bg-primary/90 text-white p-2.5 rounded-lg flex items-center justify-center transition-all shadow-md shadow-primary/20">
+<span class="material-icons">send</span>
+</button>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<aside class="w-80 bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 hidden xl:flex flex-col p-6">
+<div class="text-center mb-8">
+<div class="w-24 h-24 rounded-2xl bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-700 dark:text-blue-200 text-2xl font-bold mx-auto mb-4 border-4 border-white dark:border-slate-800 shadow-xl">AS</div>
+<h3 class="font-bold text-lg">Alex Smith</h3>
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full uppercase tracking-widest mt-2 inline-block">Junior Mentee</span>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-4 px-4">Senior CS Student at University of Technology, looking for Backend Engineering roles.</p>
+</div>
+<div class="space-y-6">
+<div>
+<h4 class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-3">Recent Categories</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[11px] font-semibold rounded">Career Advice</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[11px] font-semibold rounded">Interview Prep</span>
+</div>
+</div>
+<div>
+<h4 class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-3">Shared Files</h4>
+<div class="space-y-2">
+<div class="flex items-center gap-3 p-2 bg-slate-50 dark:bg-slate-800/50 rounded-lg group cursor-pointer">
+<div class="w-8 h-8 rounded bg-red-100 text-red-600 flex items-center justify-center">
+<span class="material-icons text-lg">picture_as_pdf</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-medium truncate">Resume_v2.pdf</p>
+<p class="text-[10px] text-slate-400">1.2 MB • Oct 24</p>
+</div>
+<span class="material-icons text-sm text-slate-300 group-hover:text-primary">download</span>
+</div>
+<div class="flex items-center gap-3 p-2 bg-slate-50 dark:bg-slate-800/50 rounded-lg group cursor-pointer">
+<div class="w-8 h-8 rounded bg-blue-100 text-blue-600 flex items-center justify-center">
+<span class="material-icons text-lg">description</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-medium truncate">Portfolio_Link.docx</p>
+<p class="text-[10px] text-slate-400">24 KB • Oct 22</p>
+</div>
+<span class="material-icons text-sm text-slate-300 group-hover:text-primary">download</span>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-slate-100 dark:border-slate-800">
+<button class="w-full py-2.5 border border-red-200 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 text-xs font-bold rounded-lg transition-colors">
+                    Archive Conversation
+                </button>
+</div>
+</div>
+</aside>
+</div>
+
+</body></html>
